@@ -2,129 +2,209 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Sicherheits- und Messtechnische Kontrollen (STK / MTK) für Medizinprodukte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+  <title>Sicherheits- und Messtechnische Kontrollen (STK / MTK)</title>
   <style>
-    body{font-family: Arial, sans-serif;line-height:1.6;background:#f7f9fb;color:#0f172a;margin:20px}
-    .container{max-width:980px;margin:0 auto;background:#fff;padding:22px;border-radius:10px;box-shadow:0 6px 20px rgba(15,23,42,0.06)}
-    h1{font-size:1.6rem;margin-top:0;color:#2c3e50}
-    h2{color:#34495e;margin-bottom:6px}
-    p{margin:0 0 10px}
-    ul{margin:0 0 12px 20px}
-    table{width:100%;border-collapse:collapse;margin:12px 0}
-    th,td{border:1px solid #e6e6e6;padding:8px;text-align:left}
-    .note{background:#eef6ff;padding:10px;border-left:4px solid #0ea5a4;margin:10px 0;border-radius:6px}
-    code{background:#f4f4f4;padding:2px 4px;border-radius:4px}
-    .small{font-size:0.9rem;color:#6b7280}
-    footer{margin-top:18px;font-size:0.9rem;color:#6b7280;text-align:center}
+    /* ======== Grundlayout ======== */
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      color: #0f172a;
+      background-color: #f7f9fb;
+      width: 100%;
+      height: 100%;
+    }
+
+    .container {
+      box-sizing: border-box;
+      max-width: 1000px;
+      width: 95%;
+      margin: 20px auto;
+      background-color: #fff;
+      padding: 24px;
+      border-radius: 10px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    h1, h2 {
+      color: #2c3e50;
+      margin-top: 0.8em;
+    }
+
+    p, ul, ol {
+      font-size: 1rem;
+      margin-bottom: 1em;
+    }
+
+    ul, ol {
+      padding-left: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1em 0;
+      font-size: 0.95rem;
+    }
+
+    th, td {
+      border: 1px solid #e2e8f0;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #f0f4f8;
+    }
+
+    .note {
+      background-color: #eef6ff;
+      padding: 12px;
+      border-left: 5px solid #0ea5a4;
+      margin: 15px 0;
+      border-radius: 6px;
+    }
+
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: #64748b;
+      text-align: center;
+      margin-top: 2em;
+    }
+
+    /* ======== Responsive Anpassung ======== */
+    @media (max-width: 768px) {
+      .container {
+        width: 96%;
+        padding: 18px;
+      }
+
+      table, th, td {
+        font-size: 0.9rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      h2 {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* ======== Drucklayout ======== */
+    @media print {
+      body {
+        background: white;
+      }
+      .container {
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      footer {
+        color: #000;
+        text-align: left;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Sicherheits- und Messtechnische Kontrollen (STK / MTK) von Medizinprodukten — Überblick & Praxis</h1>
+    <h1>Sicherheits- und Messtechnische Kontrollen (STK / MTK) von Medizinprodukten</h1>
 
-    <h2>1. Kurzüberblick</h2>
-    <p>In Krankenhäusern müssen medizinische Geräte regelmäßig auf Sicherheit, Funktionsfähigkeit und Messgenauigkeit geprüft werden. Zwei zentrale Prüfarten sind:</p>
+    <p>
+      In Krankenhäusern müssen medizinische Geräte regelmäßig auf Sicherheit und Messgenauigkeit geprüft werden. 
+      Diese Pflicht ergibt sich aus der <strong>Medizinprodukte-Betreiberverordnung (MPBetreibV)</strong> und den relevanten DIN- und VDE-Normen. 
+      Ziel ist, die Sicherheit von Patienten, Anwendern und Personal dauerhaft zu gewährleisten.
+    </p>
+
+    <h2>1. Sicherheitstechnische Kontrolle (STK)</h2>
+    <p>
+      Die STK überprüft die elektrische und funktionale Sicherheit medizinischer Geräte gemäß <code>DIN EN 62353</code>. 
+      Dazu zählen:
+    </p>
     <ul>
-      <li><strong>Sicherheitstechnische Kontrolle (STK)</strong> — Überprüfung der elektrischen und mechanischen Sicherheit, Funktion und ggf. Schutzmaßnahmen.</li>
-      <li><strong>Messtechnische Kontrolle (MTK)</strong> — Überprüfung der Messgenauigkeit und Kalibrierung (z. B. für Infusionspumpen, Messgeräte, Monitoring).</li>
+      <li>Schutzleiter- und Isolationsmessungen</li>
+      <li>Überprüfung von Ableitströmen</li>
+      <li>Funktionstests und Sichtkontrollen</li>
+      <li>Prüfung der Alarmfunktionen und Softwareversionen</li>
     </ul>
 
-    <h2>2. Gesetzliche Grundlagen & Verantwortlichkeiten</h2>
-    <p>Die rechtliche Basis in Deutschland bildet die <strong>Medizinprodukte-Betreiberverordnung (MPBetreibV)</strong> in Verbindung mit dem europäischen Medizinprodukte-Recht (MDR). Die MPBetreibV legt Pflichten für Betreiber (Krankenhäuser) fest: u. a. Überwachung der Funktionstüchtigkeit, Durchführung von Kontrollen und Dokumentation. Betreiber müssen qualifizierte Personen bestimmen und Prüffristen einhalten. </p>
-
-    <h2>3. Welche Prüfarten gibt es genau?</h2>
-    <ul>
-      <li><strong>Sicherheitstechnische Kontrolle (STK)</strong>: Prüfung der elektrischen Sicherheit, Isolationswerte, Schutzleiterwiderstand, Gehäuseschutz, Funktionstests, Sichtprüfungen und ggf. Software-Checks.</li>
-      <li><strong>Messtechnische Kontrolle (MTK)</strong>: Verifikation von Messgrößen (z. B. Druck, Volumen, Fluss, EKG-Kalibrierung). MTK kann Kalibrier- oder Justiermaßnahmen verlangen oder die Bestätigung, dass Messwerte innerhalb zulässiger Toleranzen liegen.</li>
-      <li><strong>DGUV / VDE-Prüfungen (elektrisch):</strong> Ergänzend sind Prüfungen nach DGUV Vorschrift/DGUV Information und VDE-Normen für elektrische Betriebsmittel relevant (z. B. wiederkehrende elektrische Prüfungen, ortsveränderliche Geräte).</li>
-      <li><strong>DIN EN 62353:</strong> Norm für wiederkehrende Prüfungen medizinisch elektrischer Geräte (Prüfverfahren und Dokumentation).</li>
-    </ul>
-
-    <h2>4. Prüffristen — was sagt die Verordnung / Praxis?</h2>
-    <p>Die MPBetreibV nennt kategoriale Anforderungen und verweist auf Anlagen bzw. Fristen: Für bestimmte Produktgruppen bestehen feste Nachprüffristen (MTK), für andere Geräte gelten wiederkehrende Prüfungen nach Normen wie <code>DIN EN 62353</code> oder Prüfungen nach DGUV/VDE-Richtlinien. In der Praxis werden Prüffristen oft so festgelegt, dass sie:</p>
-    <ul>
-      <li>mit Ablauf des Jahres beginnen, in dem das Gerät in Betrieb genommen wurde oder</li>
-      <li>nach dem Jahr der letzten MTK neu zu laufen beginnen (vgl. Anlage/Verordnung).</li>
-    </ul>
+    <h2>2. Messtechnische Kontrolle (MTK)</h2>
+    <p>
+      Die MTK dient der Kontrolle der Messgenauigkeit. 
+      Sie ist besonders bei Geräten vorgeschrieben, die diagnostische oder therapeutische Messwerte liefern (z. B. EKG, Blutdruckmessgeräte, Infusionspumpen).
+    </p>
     <div class="note">
-      <strong>Beispiel für übliche Praxisintervalle:</strong>
-      <ul>
-        <li>STK: je nach Gerätetyp — häufig spätestens alle 1–2 Jahre (bei Hochrisikogeräten evtl. öfter).</li>
-        <li>MTK: nach Vorgabe in Anlage bzw. Herstellerangaben — z. B. jährliche bis mehrjährige Intervalle; Fristen beginnen mit Ende des Jahres der Inbetriebnahme.</li>
-        <li>DGUV/VDE (ortsveränderliche Geräte): meist jährliche Kontrollen in Krankenhäusern, für ortsfeste Anlagen ggf. 2-jährig (kontextabhängig).</li>
-      </ul>
+      <strong>Beispiel:</strong> Eine Infusionspumpe muss regelmäßig auf den tatsächlichen Förderstrom geprüft werden. 
+      Weicht der Messwert um mehr als ±5 % vom Sollwert ab, ist eine Justierung oder Reparatur erforderlich.
     </div>
 
-    <h2>5. Qualifikation der Prüfpersonen</h2>
-    <p>Prüfungen müssen durch qualifizierte und befähigte Personen durchgeführt werden:</p>
+    <h2>3. Gesetzliche Grundlagen</h2>
     <ul>
-      <li><strong>Techniker / biomedizinische Technikdienste</strong> mit Ausbildung und Normkenntnis (DIN EN 62353, VDE, DGUV).</li>
-      <li><strong>Externe Prüfunternehmen</strong>, die akkreditiert sind oder Erfahrung in medizintechnischen Prüfungen haben.</li>
-      <li>Für MTK oft zusätzlich Fachpersonal mit messtechnischen Kenntnissen oder Kalibrierlabor.</li>
+      <li><strong>MPBetreibV §§ 6–14:</strong> legt Prüfpflichten und Fristen fest.</li>
+      <li><strong>DIN EN 62353:</strong> beschreibt Prüfverfahren für medizinisch elektrische Geräte.</li>
+      <li><strong>DGUV Vorschrift 3:</strong> elektrische Sicherheitsprüfung ortsveränderlicher Geräte.</li>
     </ul>
 
-    <h2>6. Ablauf einer Prüfung (empfohlenes Standardverfahren)</h2>
+    <h2>4. Prüffristen (Beispiele)</h2>
+    <table>
+      <tr><th>Gerätetyp</th><th>Prüfart</th><th>Intervall</th><th>Norm/Regel</th></tr>
+      <tr><td>Beatmungsgerät</td><td>STK + MTK</td><td>jährlich</td><td>MPBetreibV, DIN EN 62353</td></tr>
+      <tr><td>Defibrillator</td><td>STK</td><td>jährlich</td><td>MPBetreibV</td></tr>
+      <tr><td>Infusionspumpe</td><td>MTK</td><td>alle 2 Jahre</td><td>Anlage 2 MPBetreibV</td></tr>
+      <tr><td>EKG-Monitor</td><td>STK + MTK</td><td>jährlich</td><td>DIN EN 62353</td></tr>
+    </table>
+
+    <h2>5. Verantwortlichkeiten</h2>
+    <p>
+      Betreiber (Krankenhäuser, Kliniken) müssen sicherstellen, dass alle Prüfungen fristgerecht und durch qualifiziertes Fachpersonal durchgeführt werden. 
+      Dazu zählen Medizintechniker, Ingenieure oder beauftragte externe Prüfdienste.
+    </p>
+
+    <h2>6. Ablauf einer Prüfung</h2>
     <ol>
-      <li><strong>Vorbereitung:</strong> Gerätedaten und letzte Prüfberichte prüfen; Prüfumfang festlegen (STK, MTK, Funktionscheck).</li>
-      <li><strong>Sicherheitscheck / Sichtprüfung:</strong> Gehäuse, Anschlüsse, Kabel, Beschädigungen, Beschriftungen, Zubehör.</li>
-      <li><strong>Elektrische Prüfungen:</strong> Schutzleiter, Isolationswiderstand, Ableitströme, Erdungsprüfung (sofern anwendbar).</li>
-      <li><strong>Funktionstests:</strong> Gerät in Betrieb nehmen; Funktionsparameter prüfen (Alarme, Schnittstellen, Bedienbarkeit).</li>
-      <li><strong>Messtechnische Kontrolle:</strong> Referenzmessungen mit geeichten Messmitteln oder Kalibrierständen; Abgleich mit zulässigen Toleranzen.</li>
-      <li><strong>Dokumentation:</strong> Prüfprotokoll (Ergebnis, Messwerte, Seriennummer, Datum, Prüfperson, Maßnahmen), Kennzeichnung (Prüfplakette /Label mit Datum und Prüffrist).</li>
-      <li><strong>Maßnahmen:</strong> Bei Mängeln: Sperren, Kennzeichnen, Reparaturauftrag, erneute Prüfung nach Instandsetzung.</li>
+      <li>Sichtprüfung und Geräteidentifikation</li>
+      <li>Elektrische Sicherheitstests (STK)</li>
+      <li>Funktionsprüfung des Geräts</li>
+      <li>Messwertprüfung (MTK)</li>
+      <li>Bewertung und Dokumentation</li>
+      <li>Kennzeichnung mit Prüfplakette</li>
     </ol>
 
-    <h2>7. Dokumentation / Kennzeichnung</h2>
-    <p>Rechtlich fundamentale Anforderungen sind die lückenlose Dokumentation aller Prüfungen sowie die Kennzeichnung des Prüfergebnisses am Gerät (z. B. Prüfplakette mit Datum und nächster Prüffrist). Das Prüfprotokoll sollte enthalten:</p>
-    <table>
-      <thead><tr><th>Feld</th><th>Beschreibung</th></tr></thead>
-      <tbody>
-        <tr><td>Gerät</td><td>Hersteller, Typ, Seriennummer, Standort</td></tr>
-        <tr><td>Prüfart</td><td>STK / MTK / DGUV / sonstige</td></tr>
-        <tr><td>Datum</td><td>Durchführung der Prüfung</td></tr>
-        <tr><td>Prüfperson</td><td>Name, Qualifikation, ggf. Firma</td></tr>
-        <tr><td>Ergebnis</td><td>Messwerte, Bewertung (OK / Mängel), Maßnahmen</td></tr>
-        <tr><td>Nächste Prüfung</td><td>Datum oder Fristangabe (z. B. Jahr)</td></tr>
-      </tbody>
-    </table>
-
-    <h2>8. Beispiele für spezielle Gerätetypen</h2>
+    <h2>7. Dokumentation</h2>
+    <p>
+      Jedes geprüfte Gerät erhält ein Prüfprotokoll mit:
+    </p>
     <ul>
-      <li><strong>Beatmungsgeräte / Anästhesiegeräte:</strong> häufigere Funktions- und MTK-Kontrollen wegen unmittelbarer Gefährdungswirkung.</li>
-      <li><strong>Defibrillatoren (AEDs):</strong> regelmäßige Sichtprüfungen; manche Geräte führen Selbsttests, zusätzlich periodische Funktionsprüfungen.</li>
-      <li><strong>Überwachungsmonitore / EKG:</strong> STK + MTK in regelmäßigen Abständen; Kalibrierung für Messeingänge wichtig.</li>
+      <li>Datum, Prüfername, Prüfergebnis</li>
+      <li>Geräte-ID, Seriennummer, Standort</li>
+      <li>Messwerte, Mängel, Maßnahmen</li>
+      <li>Nächster Prüftermin</li>
     </ul>
 
-    <h2>9. Praktische Tipps für Krankenhäuser</h2>
-    <ul>
-      <li>Führen Sie ein zentrales Inventar mit Prüfstatus, Fristen und Verantwortlichkeiten.</li>
-      <li>Planen Sie einen <strong>Parallelbetrieb</strong> (Notfallreserve) bei Wartungsphasen sensibler Geräte.</li>
-      <li>Nutzen Sie Barcode/QR-Labels zur schnellen Identifikation und Zugriff auf Prüfprotokolle.</li>
-      <li>Regelmäßige Schulungen für klinisches Personal zur Erkennung von Mängeln und Meldewegen.</li>
-      <li>Vereinbaren Sie Service- und Prüfverträge mit qualifizierten Dienstleistern inkl. SLAs.</li>
-    </ul>
+    <h2>8. Folgen bei Nichteinhaltung</h2>
+    <p>
+      Unterlassene oder verspätete Prüfungen können zu Haftungsansprüchen, Bußgeldern und Betriebsuntersagungen führen. 
+      Zudem gefährden sie die Patientensicherheit und das Qualitätsmanagement nach ISO 13485.
+    </p>
 
-    <h2>10. Beispiel-Prüfplan</h2>
-    <table>
-      <thead><tr><th>Gerät</th><th>Prüfart</th><th>Intervall (Beispiel)</th><th>Verantwortlich</th></tr></thead>
-      <tbody>
-        <tr><td>Beatmungsgerät</td><td>STK + MTK</td><td>6 Monate / 12 Monate</td><td>Biomed. Technik / Hersteller</td></tr>
-        <tr><td>Patientenmonitor</td><td>STK + MTK</td><td>12 Monate / 12 Monate</td><td>Technikdienst</td></tr>
-        <tr><td>Infusionspumpe</td><td>MTK</td><td>12 Monate</td><td>Medizintechnik</td></tr>
-        <tr><td>Defibrillator (AED)</td><td>Sichtprüfung / STK</td><td>täglich Sicht / 12 Monate STK</td><td>Pflege / Technik</td></tr>
-      </tbody>
-    </table>
-
-    <h2>11. Folgen bei Nichteinhaltung</h2>
-    <p>Nichteinhaltung von Prüffristen bzw. mangelhafte Dokumentation kann rechtliche Konsequenzen haben (Haftung, Bußgelder), erhöhte Patientenrisiken sowie Probleme bei Zertifizierungen und Audits bedeuten. Betreiber sind verpflichtet, ein sicheres Betreiben nachzuweisen.</p>
-
-    <h2>12. Fazit</h2>
-    <p>Stabile Prozesse für STK und MTK sind für den sicheren Klinikbetrieb unverzichtbar. Gesetzliche Vorgaben (MPBetreibV) plus anerkannte Normen (DIN EN 62353, VDE/DGUV) bilden die Basis — organisatorische Maßnahmen (Inventar, Prüfplan, Dokumentation, Qualifikation) sorgen für die praktikable Umsetzung.</p>
-
-    <footer class="small">
-      <div>Hinweis: Diese Seite ist eine fachliche Zusammenstellung und ersetzt keine verbindliche Rechtsberatung. Für konkrete Fristen und Vorschriften prüfen Sie bitte die offizielle Gesetzesfassung / Normtexte oder lassen sich rechtlich beraten.</div>
+    <footer>
+      © 2025 Krankenhaus-Medizintechnik | Quelle: MPBetreibV, DIN EN 62353, DGUV V3
     </footer>
   </div>
 </body>
 </html>
+
+

@@ -22,12 +22,22 @@
         ul {
             margin-bottom: 10px;
         }
-        .gateway-diagram {
+        .diagram {
             font-family: monospace;
             background-color: #f4f4f4;
             padding: 10px;
             border: 1px solid #ccc;
             white-space: pre;
+            margin-bottom: 20px;
+        }
+        .serial-image {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            margin-bottom: 5px;
+        }
+        .source-link {
+            font-size: 0.9em;
         }
     </style>
 </head>
@@ -53,7 +63,7 @@
     <p><strong>Vorteile:</strong> Echtzeit-Daten, vollständige Dokumentation, bessere Patientensicherheit.</p>
 
     <h2>4. Beispiel Gateway-Diagramm</h2>
-    <div class="gateway-diagram">
+    <div class="diagram">
 [Beatmungsgerät]        [EKG]          [Narkosegerät]
        |                  |                  |
        +-------+----------+---------+--------+
@@ -70,9 +80,19 @@
                   [Patientendaten]
     </div>
 
+    <h2>5. Serielle Anbindung</h2>
+    <p>
+        Einige medizinische Geräte, wie Beatmungsgeräte oder Überwachungsmonitore, werden über serielle Schnittstellen (D89, RJ45 etc.) direkt mit einem Interface oder Gateway verbunden. 
+        Dies ermöglicht eine stabile Datenübertragung ins Krankenhausnetzwerk und anschließend ins PDMS.
+    </p>
+    <img src="Integrationfoto.jpg" alt="Serielle Anbindung eines medizinischen Geräts" class="serial-image">
+    <p class="source-link">
+        Quelle: <a href="https://www.gehealthcare.com/-/jssmedia/50270cf669814d6e93b6f57ffa45e6f0.pdf" target="_blank">GE Healthcare PDF</a>
+    </p>
+
     <h2>Schulungsvideo</h2>
     <p>Hier ist das Schulungsvideo auf YouTube:</p>
-    <a href="">Video ansehen</a>
+    <a href="https://www.youtube.com/watch?v=7Lm1qGMn680">Video ansehen</a>
 
 </body>
 </html>

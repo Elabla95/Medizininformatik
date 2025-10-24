@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integration medizinischer Geräte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+        h2 {
+            color: #34495e;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        ul {
+            margin-bottom: 10px;
+        }
+        .gateway-diagram {
+            font-family: monospace;
+            background-color: #f4f4f4;
+            padding: 10px;
+            border: 1px solid #ccc;
+            white-space: pre;
+        }
+    </style>
+</head>
+<body>
+    <h1>Integration medizinischer Geräte im Krankenhaus</h1>
+
+    <h2>1. Ausgangslage</h2>
+    <p>
+        Krankenhäuser nutzen Patientenmanagementsysteme (PDMS) für Dokumentation, Labor und Patientenakten. 
+        Medizinische Geräte stammen von unterschiedlichen Herstellern (Beatmungsgeräte, Narkosegeräte, Überwachungsmonitore, EKG, EEG etc.). 
+        Ziel: Automatisierte und sichere Übertragung der Gerätedaten ins PDMS.
+    </p>
+
+    <h2>2. Anbindungsmöglichkeiten der Geräte</h2>
+    <ul>
+        <li><strong>Direkte PDMS-Hardware:</strong> Geräte werden direkt über Netzwerk oder serielle Schnittstellen angebunden.</li>
+        <li><strong>Gateway-Lösung:</strong> Geräte werden über einen Gateway-Server ins Krankenhausnetzwerk eingebunden.</li>
+        <li><strong>Serielle oder Ethernet-Anbindung:</strong> Daten werden über Treiber oder Gateway ins Netzwerk geleitet.</li>
+    </ul>
+
+    <h2>3. Datenfluss (vereinfacht)</h2>
+    <p>1. Medizinisches Gerät → 2. Netzwerkanschluss (Ethernet/Gateway/Seriell) → 3. Krankenhaus-IT-Infrastruktur → 4. PDMS → 5. Patientendaten</p>
+    <p><strong>Vorteile:</strong> Echtzeit-Daten, vollständige Dokumentation, bessere Patientensicherheit.</p>
+
+    <h2>4. Beispiel Gateway-Diagramm</h2>
+    <div class="gateway-diagram">
+[Beatmungsgerät]        [EKG]          [Narkosegerät]
+       |                  |                  |
+       +-------+----------+---------+--------+
+               | Gateway / Interface-Server |
+               +---------------------------+
+                         |
+                         v
+                [Krankenhausnetzwerk]
+                         |
+                         v
+                       [PDMS]
+                         |
+                         v
+                  [Patientendaten]
+    </div>
+
+    <h2>Schulungsvideo</h2>
+    <p>Hier ist das Schulungsvideo auf YouTube:</p>
+    <a href="">Video ansehen</a>
+
+</body>
+</html>

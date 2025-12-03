@@ -90,6 +90,12 @@
       Medizininformatik ist die Wissenschaft und Praxis, die sich mit der systematischen
       Verarbeitung, Verwaltung und Nutzung von Daten, Informationen und Wissen im Gesundheitswesen befasst...
     </p>
+	<!-- Kommentarbereich -->
+    <a href="#" id="kommentarLink">Kommentar schreiben</a>
+    <div id="kommentarFeld" style="display:none; margin-top:10px;">
+      <textarea id="kommentarTextarea" rows="5" maxlength="500"></textarea>
+      <p>Noch <span id="zeichenRest">500</span> Zeichen übrig</p>
+	
   </div>
 
   <div>
@@ -138,6 +144,26 @@ Optimierung von Prozessen: Durch den Einsatz von IT-Systemen werden Arbeitsablä
   }
 
   setInterval(wechselBild, 2000); // alle 2 Sekunden
+  
+  
+  
+  // Textarea einblenden
+    document.getElementById("kommentarLink").addEventListener("click", function(e){
+      e.preventDefault();
+      document.getElementById("kommentarFeld").style.display = "block";
+    });
+
+    // Zeichen-Zähler
+    const textarea = document.getElementById("kommentarTextarea");
+    const rest = document.getElementById("zeichenRest");
+
+
+    textarea.addEventListener("input", function() {
+      const max = 500;
+      rest.textContent = max - this.value.length;
+    });
+	
+
 </script>
 </body>
 </html>

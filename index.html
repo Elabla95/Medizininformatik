@@ -128,17 +128,17 @@ Optimierung von Prozessen: Durch den Einsatz von IT-Systemen werden Arbeitsablä
 
 
   <!-- JavaScript für 3-Bilder-Wechsel -->
-  <script>
-    const bilder = ["header.jpg", "bild1.jpg", "bild2.jpg"]; 
-    let index = 0;
+<script>
+  const bilder = ["header.jpg", "bild1.jpg", "bild2.jpg"];
+  let index = 0;
 
-    function wechselBild() {
-      index = (index + 1) % bilder.length;
-      document.getElementById("headerBild").src = bilder[index];
-    }
+  function wechselBild() {
+    index = (index + 1) % bilder.length;
+    document.getElementById("headerBild").src = bilder[index];
+  }
 
-    setInterval(wechselBild, 2000); // alle 2 Sekunden
-  </script>
-
+  setInterval(wechselBild, 2000); // alle 2 Sekunden
+</script>
 </body>
 </html>
+

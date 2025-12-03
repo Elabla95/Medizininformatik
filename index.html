@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Medizininformatik</title>
+
   <style>
     body {
       margin: 0;
@@ -37,12 +38,11 @@
       transform: scale(1.05);
     }
 
-   .header-image {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
+    .header-image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
 
     .headline {
       color: rgb(41, 100, 155);
@@ -66,19 +66,23 @@
     }
   </style>
 </head>
+
 <body>
 
   <!-- Kopfbereich -->
   <h1 class="headline">MedizinInformatik</h1>
-  <img class="header-image" src="header.jpg" alt="Header Bild">
 
-  <!-- Navigation mit vier Karten -->
+  <!-- Headerbild (automatischer Wechsel) -->
+  <img id="headerBild" class="header-image" src="header.jpg" alt="Header Bild">
+
+  <!-- Navigation -->
   <div class="navbar">
     <a href="technik.html" class="nav-card">Technik</a>
     <a href="forschung.html" class="nav-card">Forschung</a>
     <a href="edv.html" class="nav-card">EDV</a>
     <a href="kontakt.html" class="nav-card">Kontakt</a>
   </div>
+
   <!-- Hauptinhalt -->
   <div class="content">
     <h1>Einführung:</h1>
@@ -88,22 +92,27 @@
     </p>
   </div>
 
- <div>
-  <h1>Weiteren Artikel<br>
-    <div> 
+  <div>
+    <h1>Weiteren Artikel</h1>
+    <div>
       <a href="https://www.bht-berlin.de/medi">Studiengang</a>
       <a href="https://de.wikipedia.org/wiki/Medizinische_Informatik">Wikipedia</a>
-      </div>
     </div>
-  <h1>Einführung:</h1>
+  </div>
+
+ <h1>Einführung:</h1>
+ 
 <h1>Was ist Medizininformatik?:</h1>
+
 Medizininformatik ist die Wissenschaft und Praxis, die sich mit der systematischen Verarbeitung, Verwaltung und Nutzung von Daten, Informationen und Wissen im Gesundheitswesen befasst, um die Qualität der medizinischen Versorgung und Forschung zu verbessern. Der Studiengang Medizininformatik kombiniert Informatik und Medizin, um Fachkräfte auszubilden, die als Vermittler zwischen IT und Medizin agieren können, und bietet vielfältige Karrieremöglichkeiten in Krankenhäusern, der Medizintechnik oder Forschung. 
 Was ist Medizininformatik?
 <h1>Definition:</h1> Es ist eine interdisziplinäre Wissenschaft, die sich mit der systematischen Erfassung, Darstellung, Verwaltung und Verarbeitung von Daten und Informationen im medizinischen Bereich beschäftigt. 
 <h1>Ziele:</h1> Ziel ist es, durch die Nutzung von Daten und Informationstechnologie die Gesundheitsversorgung zu verbessern, Arbeitsabläufe zu optimieren und die medizinische Forschung zu unterstützen. 
+  
 
-<h1>Was machen Medizininformatiker?:</h1>
-Systeme entwickeln: Sie konzipieren und entwickeln Softwarelösungen und IT-Systeme für das Gesundheitswesen, wie elektronische Patientenakten (ePA). 
+  <h1>Was machen Medizininformatiker?</h1>
+  <p>
+   Systeme entwickeln: Sie konzipieren und entwickeln Softwarelösungen und IT-Systeme für das Gesundheitswesen, wie elektronische Patientenakten (ePA). 
 Daten analysieren: Sie analysieren medizinische Daten zur Verbesserung der Diagnostik, Therapieplanung und zur Erforschung neuer Behandlungsmethoden. 
 Schnittstellen schaffen: Sie fungieren als wichtige Schnittstelle und vermitteln zwischen medizinischen Fachkräften und IT-Experten, um deren Anforderungen in technische Lösungen umzusetzen. 
 Studium und Karriere
@@ -113,6 +122,23 @@ Karrierechancen: Absolventen sind gefragt und finden Beschäftigung in Krankenh�
 Anwendungsbereiche
 Digitale Patientenakte (ePA): Die Medizininformatik ist zentral für die Digitalisierung und Verwaltung von Patientendaten. 
 Forschung: Datenanalyse und das Management von Gesundheitsdaten ermöglichen wichtige Fortschritte in der medizinischen Forschung und die Verbesserung der Patientenversorgung. 
-Optimierung von Prozessen: Durch den Einsatz von IT-Systemen werden Arbeitsabläufe im Gesundheitswesen effizienter gestaltet.  
+Optimierung von Prozessen: Durch den Einsatz von IT-Systemen werden Arbeitsabläufe im Gesundheitswesen effizienter gestaltet. 
+
+  </p>
+
+
+  <!-- JavaScript für 3-Bilder-Wechsel -->
+  <script>
+    const bilder = ["header.jpg", "bild1.jpg", "bild2.jpg"]; 
+    let index = 0;
+
+    function wechselBild() {
+      index = (index + 1) % bilder.length;
+      document.getElementById("headerBild").src = bilder[index];
+    }
+
+    setInterval(wechselBild, 2000); // alle 2 Sekunden
+  </script>
+
 </body>
 </html>
